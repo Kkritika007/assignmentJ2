@@ -2,6 +2,8 @@ package com.example.a2java;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Map;
+
 public class ApiResponse {
 
     @SerializedName("result")
@@ -27,7 +29,7 @@ public class ApiResponse {
     private String base_code;
 
     @SerializedName("conversion_rates")
-    private Object conversion_rates;
+    private Map<String, Double> conversion_rates;
 
     public String getResult() {
         return result;
