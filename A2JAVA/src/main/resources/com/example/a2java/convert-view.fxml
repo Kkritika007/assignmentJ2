@@ -11,10 +11,10 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a2java.ConvertController">
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a2java.ConvertController">
 
-    <VBox alignment="CENTER" layoutX="148.0" layoutY="66.0" prefHeight="275.0" prefWidth="304.0" spacing="10">
-        <Label alignment="CENTER" prefHeight="16.0" prefWidth="161.0" style="-fx-font-size: 20px;" text="Currency Converter" />
+    <VBox styleClass="vbox" alignment="CENTER" layoutX="107.0" layoutY="15.0" prefHeight="367.0" prefWidth="391.0" spacing="10">
+        <Label alignment="CENTER" prefHeight="16.0" prefWidth="195.0" style="-fx-font-size: 20px;" styleClass="heading-label" text="Currency Converter" />
         <GridPane alignment="CENTER" prefHeight="134.0" prefWidth="304.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" />
@@ -29,21 +29,21 @@
             </rowConstraints>
 
             <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <TextField fx:id="amountField" prefHeight="26.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="amountField" prefHeight="26.0" prefWidth="96.0" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
             <Label text="From:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <ComboBox fx:id="fromCurrencyComboBox" prefHeight="26.0" prefWidth="75.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="fromCurrencyComboBox" prefHeight="26.0" prefWidth="75.0" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
             <Label text="To:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <ComboBox fx:id="toCurrencyComboBox" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="toCurrencyComboBox" prefHeight="26.0" prefWidth="76.0" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-            <Button onAction="#convertButtonClicked" prefHeight="26.0" prefWidth="77.0" text="Convert" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <Button onAction="#convertButtonClicked" prefHeight="36.0" prefWidth="86.0" styleClass="custom-button" text="Convert" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
         </GridPane>
 
         <HBox alignment="CENTER">
-            <Label fx:id="convertedAmountLabel" />
+            <Label fx:id="convertedAmountLabel" styleClass="heading-label" />
         </HBox>
-         <Label text="Converted Amount: " />
-        <Button onAction="#viewHistoryButtonClicked" prefHeight="35.0" prefWidth="214.0" text="View History" />
+         <Label styleClass="heading-label" text="Converted Amount: " />
+        <Button onAction="#viewHistoryButtonClicked" prefHeight="35.0" prefWidth="214.0" styleClass="custom-button" text="View History" />
     </VBox>
 </AnchorPane>
