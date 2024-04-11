@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.FileReader;
@@ -135,6 +136,7 @@ public class ConvertController implements Initializable {
             Stage stage = new Stage();
             stage.setTitle("Currency Conversion History");
             stage.setScene(new Scene(root));
+            stage.getIcons().add(new Image("file:src/main/resources/com/example/a2java/cclogo.jpg"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

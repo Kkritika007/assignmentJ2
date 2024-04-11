@@ -2,10 +2,10 @@
     -fx-font-weight: bold;
 }
 .root {
-    -fx-background-color: rgba(121, 175, 189, 0.96); /* Light blue color */
+    -fx-background-color: rgb(232, 162, 198); /* Light blue color */
 }
 .custom-button {
-    -fx-background-color: #afb0af; /*  background color */
+    -fx-background-color: #d2d2d2; /*  background color */
     -fx-text-fill: #0c0c0c; /* Text color */
     -fx-background-radius: 5px; /* Rounded corners */
     -fx-font-size: 14px; /* Font size */
@@ -20,6 +20,7 @@
     -fx-font-weight: bold; /* Make the text bold */
     -fx-font-size: 20px; /* Adjust the font size */
     -fx-text-fill: #333333; /* Text color */
+    -fx-font-family: Biome;
 }
 
 /* Text Field Style */
@@ -28,15 +29,17 @@
     -fx-text-fill: #333333; /* Text color */
     -fx-font-size: 14px; /* Font size */
     -fx-padding: 5px; /* Padding around the text field */
+    -fx-font-family: Biome;
 }
 
 /* ComboBox Style */
 .combo-box {
     -fx-font-size: 12px; /* Font size */
+    -fx-font-family: Biome;
 }
 /* VBox Style */
 .vbox {
-    -fx-font-family: Biome ;
+    -fx-font-family: Biome;
     -fx-background-color: rgba(231, 231, 231, 0.6); /* Transparent background */
     -fx-background-radius: 10; /* Rounded corners */
     -fx-padding: 10; /* Add padding to make the hover effect visible */
