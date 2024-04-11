@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This XML file defines the layout for a currency converter GUI -->
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -12,14 +13,20 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.a2java.ConvertController">
+    <!-- AnchorPane is the root container for the GUI -->
 
+    <!-- Vertical Box (VBox) to organize components vertically -->
     <VBox styleClass="vbox" alignment="CENTER" layoutX="107.0" layoutY="15.0" prefHeight="367.0" prefWidth="391.0" spacing="10">
+        <!-- Heading Label for the currency converter -->
         <Label alignment="CENTER" prefHeight="16.0" prefWidth="195.0" style="-fx-font-size: 20px;" styleClass="heading-label" text="Currency Converter" />
+
+        <!-- GridPane to organize input components -->
         <GridPane alignment="CENTER" prefHeight="134.0" prefWidth="304.0">
+            <!-- Column and Row Constraints for GridPane -->
             <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" />
                 <ColumnConstraints hgrow="ALWAYS" />
-            <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="ALWAYS" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints vgrow="ALWAYS" />
@@ -28,22 +35,31 @@
                 <RowConstraints vgrow="ALWAYS" />
             </rowConstraints>
 
+            <!-- Label and TextField for inputting amount -->
             <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
             <TextField fx:id="amountField" prefHeight="26.0" prefWidth="96.0" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
+            <!-- Label and ComboBox for selecting 'from' currency -->
             <Label text="From:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
             <ComboBox fx:id="fromCurrencyComboBox" prefHeight="26.0" prefWidth="75.0" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
+            <!-- Label and ComboBox for selecting 'to' currency -->
             <Label text="To:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
             <ComboBox fx:id="toCurrencyComboBox" prefHeight="26.0" prefWidth="76.0" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
+            <!-- Button to trigger conversion -->
             <Button onAction="#convertButtonClicked" prefHeight="36.0" prefWidth="86.0" styleClass="custom-button" text="Convert" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
         </GridPane>
 
+        <!-- HBox for displaying converted amount -->
         <HBox alignment="CENTER">
             <Label fx:id="convertedAmountLabel" styleClass="heading-label" />
         </HBox>
-         <Label styleClass="heading-label" text="Converted Amount: " />
+
+        <!-- Label for displaying "Converted Amount" -->
+        <Label styleClass="heading-label" text="Converted Amount: " />
+
+        <!-- Button to view conversion history -->
         <Button onAction="#viewHistoryButtonClicked" prefHeight="35.0" prefWidth="214.0" styleClass="custom-button" text="View History" />
     </VBox>
 </AnchorPane>
